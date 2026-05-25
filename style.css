@@ -1,0 +1,166 @@
+/* Базові налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+}
+
+/* Шапка: фон світло-сірий */
+.header {
+    background-color: #d3d3d3;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111;
+}
+
+/* Список (вимога) */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Псевдокласи (вимога) */
+.nav-list li:first-child a {
+    font-weight: bold;
+    color: #000;
+}
+
+.nav-list a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+.burger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Основний контент: фон білий, ширина 90%, по центру */
+.main-content {
+    background-color: #ffffff;
+    width: 90%;
+    margin: 30px auto;
+    padding: 40px;
+}
+
+.current-exhibition h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #111;
+}
+
+.exhibition-block {
+    width: 100%;
+}
+
+/* Зображення 100% ширини контейнера (вимога) */
+.exhibition-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 25px;
+}
+
+/* Flexbox секція з кількома колонками (вимога) */
+.exhibition-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.exhibition-text {
+    flex: 1;
+}
+
+.exhibition-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.exhibition-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Підвал: фон темно-сірий, текст білий */
+.footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивність (Мобільні пристрої) */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* ховаємо меню */
+    }
+    
+    .burger {
+        display: block; /* показуємо гамбургер */
+    }
+
+    .exhibition-details {
+        flex-direction: column; /* колонки складаються одна під одну */
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
